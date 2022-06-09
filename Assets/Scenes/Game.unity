@@ -378,7 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca01a06e2350665495e1233187934e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightScore: 0
+  rightScore: 2
   leftScore: 0
   maxScore: 3
   ball: {fileID: 1039632283}
