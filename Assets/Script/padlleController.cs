@@ -21,6 +21,7 @@ public class padlleController : MonoBehaviour
     {
         // moveing object  width input
         MoveObject(GetInput());
+        Debug.Log("paddle speed: " + speed);
     }
 
     //funtion for get input from player
