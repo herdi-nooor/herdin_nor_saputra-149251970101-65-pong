@@ -1,7 +1,12 @@
 Library/*
 Logs/*
 Temp/*
-build
+
+Assets/
+Packages/
+ProjectSettings/
+UserSettings/
+
 
 .vsconfig
 *.sln
