@@ -1,9 +1,10 @@
 Library/*
 Logs/*
 Temp/*
-build
+build/*
 
 .vsconfig
+.vscode
 *.sln
 New
 obj
