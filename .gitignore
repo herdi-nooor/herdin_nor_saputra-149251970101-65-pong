@@ -3,6 +3,7 @@ Logs/*
 Temp/*
 
 .vsconfig
+.vscode
 *.sln
 New
 obj
