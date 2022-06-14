@@ -1,15 +1,6 @@
 Library/*
 Logs/*
 Temp/*
-<<<<<<< HEAD
-=======
-
-Assets/
-Packages/
-ProjectSettings/
-UserSettings/
-
->>>>>>> origin/build
 
 .vsconfig
 *.sln
