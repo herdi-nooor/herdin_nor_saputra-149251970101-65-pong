@@ -10,6 +10,7 @@ public class mainMenuController : MonoBehaviour
         Debug.Log("Created By HN"); 
     }
     
+    // method untuk menjalankan scene "Game"
     public void PlayGame() 
     { 
         SceneManager.LoadScene("Game"); 

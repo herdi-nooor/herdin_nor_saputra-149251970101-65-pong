@@ -10,6 +10,7 @@ public class ScoreManager : MonoBehaviour
     public int maxScore;
     public ballController ball;
 
+    // method untuk menambah nilai pemain sebelah kanan
     public void AddRightScore(int increment) 
     { 
         rightScore += increment; 
@@ -21,6 +22,7 @@ public class ScoreManager : MonoBehaviour
         } 
     } 
  
+    // method untuk menambah nilai pemain sebelah kiri
     public void AddLeftScore(int increment) 
     { 
         leftScore += increment; 
@@ -32,6 +34,7 @@ public class ScoreManager : MonoBehaviour
         } 
     } 
  
+    // method jika permainan selesao dan mengembalikan ke scene "Main menu"
     public void GameOver() 
     { 
         SceneManager.LoadScene("Main Menu");
