@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class mainMenuController : MonoBehaviour
 {
+    // method untuk menjalankan scene "Credit"
     public void OpenAuthor() 
     { 
+        SceneManager.LoadScene("Credit");
         Debug.Log("Created By HN"); 
     }
     

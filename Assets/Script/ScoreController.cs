@@ -7,13 +7,23 @@ public class ScoreController : MonoBehaviour
 {
     public Text LeftScore; 
     public Text RightScore;
- 
     public ScoreManager manager;
-    public padlleController padlle;
+
+    // haua untuk mengecek, akan dihapus
+    public Text padle1;
+    public Text padle2;
+    public padlleController padlle1;
+    public padlleController padlle2;
+ 
+
 
     private void Update() 
     { 
         LeftScore.text = manager.leftScore.ToString(); 
-        RightScore.text = manager.rightScore.ToString(); 
+        RightScore.text = manager.rightScore.ToString();
+        padle1.text = padlle1.speed.ToString();
+        padle2.text = padlle2.speed.ToString();
     } 
+
+
 }

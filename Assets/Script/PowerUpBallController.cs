@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PowerUpController : MonoBehaviour
+public class PowerUpBallController : MonoBehaviour
 {
     public Collider2D ball; 
     public float magnitude; 

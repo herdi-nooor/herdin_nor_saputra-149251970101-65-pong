@@ -9,6 +9,7 @@ public class padlleController : MonoBehaviour
     public KeyCode downKey;
     private Rigidbody2D rig;
 
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -43,5 +44,10 @@ public class padlleController : MonoBehaviour
     private void MoveObject(Vector2 movement) 
     { 
         rig.velocity = movement; 
+    }
+
+    public void ActivatePUSpeedUp(int magnitude) 
+    { 
+        speed += magnitude; 
     }
 }
