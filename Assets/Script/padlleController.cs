@@ -4,17 +4,27 @@ using UnityEngine;
 
 public class padlleController : MonoBehaviour
 {
-    public int speed;
+    public int baseSpeed;
     public KeyCode upKey;
     public KeyCode downKey;
     private Rigidbody2D rig;
 
+    private float timerSpeed;
+    private float powerSpeedInterval;
+    private bool powerSpeedUP;
+    private int speed;
+    // private int baseSize;
+    // private int size;
+
+    private ballController ball;
 
     // Start is called before the first frame update
     private void Start()
     {
         rig = GetComponent<Rigidbody2D>();
-        
+        powerSpeedInterval = 5;
+        speed = baseSpeed;
+        powerSpeedUP = false;
     }
 
     // Update is called once per frame
@@ -22,7 +32,28 @@ public class padlleController : MonoBehaviour
     {
         // moveing object  width input
         MoveObject(GetInput());
-        Debug.Log("paddle speed: " + speed);
+        if (powerSpeedUP == true)
+        {
+            timerSpeed += Time.deltaTime;
+    
+            if (timerSpeed > powerSpeedInterval) 
+            { 
+                resetSpeedPadlle();
+                powerSpeedUP = false;
+                timerSpeed -= powerSpeedInterval; 
+            }
+        }
+    }
+
+    private void resetSpeedPadlle()
+    {
+        Debug.Log("reset sped");
+        speed = baseSpeed;
+    }
+
+    private void resetSizePadlle()
+    {
+
     }
 
     //funtion for get input from player
@@ -46,8 +77,26 @@ public class padlleController : MonoBehaviour
         rig.velocity = movement; 
     }
 
-    public void ActivatePUSpeedUp(int magnitude) 
+    // powerup speed moving padle
+    public void ActivatePUSpeedUp() 
     { 
-        speed += magnitude; 
+        speed *= 2; 
+        powerSpeedUP = true;
+    }
+
+
+    public float TimerSpeed
+    {
+        get
+        {
+            return this.timerSpeed;
+        }
+    }
+     public float Speed
+    {
+        get
+        {
+            return this.speed;
+        }
     }
 }

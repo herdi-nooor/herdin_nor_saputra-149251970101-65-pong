@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ebde6f985c047c286e899ed34ead2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  baseSpeed: 10
   upKey: 119
   downKey: 115
 --- !u!61 &60305634
@@ -642,7 +642,7 @@ GameObject:
   - component: {fileID: 367097689}
   - component: {fileID: 367097688}
   m_Layer: 5
-  m_Name: padle2
+  m_Name: txtpadle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -664,8 +664,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 345, y: 199}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 345, y: 149.96999}
+  m_SizeDelta: {x: 160, y: 128.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &367097688
 MonoBehaviour:
@@ -1233,7 +1233,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 1039632284}
-  magnitude: 5
   manager: {fileID: 1723285489}
 --- !u!58 &663297949
 CircleCollider2D:
@@ -1690,7 +1689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f00e8845a1d11fbeadbd13cab6ac5ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 14, y: 0}
+  speed: {x: 20, y: 0}
   resetPosition: {x: 0, y: 0}
 --- !u!58 &1039632284
 CircleCollider2D:
@@ -1826,7 +1825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ebde6f985c047c286e899ed34ead2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  baseSpeed: 10
   upKey: 273
   downKey: 274
 --- !u!61 &1577812128
@@ -2095,7 +2094,7 @@ GameObject:
   - component: {fileID: 1824095188}
   - component: {fileID: 1824095187}
   m_Layer: 5
-  m_Name: padle1
+  m_Name: txtpadle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2117,8 +2116,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -235, y: 199}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -234.11, y: 149.97}
+  m_SizeDelta: {x: 161.78, y: 128.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1824095187
 MonoBehaviour:

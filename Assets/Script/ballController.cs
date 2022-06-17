@@ -8,12 +8,21 @@ public class ballController : MonoBehaviour
     public Vector2 speed;
     private Rigidbody2D rig;
     public Vector2 resetPosition;
+    private string Paddle;
+
     
     // Start is called before the first frame update
     private void Start()
     {
         rig = GetComponent<Rigidbody2D>();
         rig.velocity = speed;
+    }
+    public string paddle
+    {
+        get
+        {
+            return this.Paddle;
+        }
     }
 
     // method untuk mereset posisi bola
@@ -29,5 +38,16 @@ public class ballController : MonoBehaviour
         rig.velocity *= magnitude; 
     }
 
+    // mengecek paddle mana yang terakhir di tabrak oleh bola
+    private void OnCollisionEnter2D (Collision2D collisionInfo) 
+    {
+        string lastCollision = collisionInfo.collider.tag;
+        string name = collisionInfo.collider.name;
+        if ( lastCollision == "Player")
+        {
+            Paddle = name;
+        }
+    }
 
+    
 }

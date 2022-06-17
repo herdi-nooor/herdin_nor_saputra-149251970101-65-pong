@@ -9,7 +9,6 @@ public class mainMenuController : MonoBehaviour
     public void OpenAuthor() 
     { 
         SceneManager.LoadScene("Credit");
-        Debug.Log("Created By HN"); 
     }
     
     // method untuk menjalankan scene "Game"
