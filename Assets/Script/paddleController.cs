@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class padlleController : MonoBehaviour
+public class paddleController : MonoBehaviour
 {
     public int baseSpeed;
     public KeyCode upKey;
@@ -106,31 +106,11 @@ public class padlleController : MonoBehaviour
         transform.localScale = new Vector2(1, 8);
         powerSizeUP = true;
     }
-
-
-
-
-
-// akan di hapus code dibawah
-    public float TimerSpeed
-    {
-        get
-        {
-            return this.timerSpeed;
-        }
-    }
      public float Speed
     {
         get
         {
             return this.speed;
-        }
-    }
-    public float TimerSize
-    {
-        get
-        {
-            return this.timerSize;
         }
     }
 }
