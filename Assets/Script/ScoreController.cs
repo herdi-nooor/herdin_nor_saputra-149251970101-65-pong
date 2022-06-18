@@ -21,8 +21,14 @@ public class ScoreController : MonoBehaviour
     { 
         LeftScore.text = manager.leftScore.ToString(); 
         RightScore.text = manager.rightScore.ToString();
-        padle1.text = "player 1 : " + padlle1.Speed.ToString() + "\n speed up : " + ((int)padlle1.TimerSpeed).ToString();
-        padle2.text = "player 1 : " + padlle2.Speed.ToString() + "\n speed up : " + ((int)padlle2.TimerSpeed).ToString();
+        Debug.Log("paddle speed player 1 : " + padlle1.Speed.ToString() +
+                    "\npaddle speed player 2 : " + padlle2.Speed.ToString());
+        padle1.text = "player 1 : " + padlle1.Speed.ToString() + 
+        "\n speed up : " + ((int)padlle1.TimerSpeed).ToString() +
+        "\n size up : " + ((int)padlle1.TimerSize).ToString();
+        padle2.text = "player 1 : " + padlle2.Speed.ToString() + 
+        "\n speed up : " + ((int)padlle2.TimerSpeed).ToString() +
+        "\n size up : " + ((int)padlle2.TimerSize).ToString();
     } 
 
 

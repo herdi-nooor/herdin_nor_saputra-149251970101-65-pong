@@ -8,13 +8,15 @@ public class padlleController : MonoBehaviour
     public KeyCode upKey;
     public KeyCode downKey;
     private Rigidbody2D rig;
+    private float powerInterval;
 
     private float timerSpeed;
-    private float powerSpeedInterval;
     private bool powerSpeedUP;
     private int speed;
-    // private int baseSize;
-    // private int size;
+
+    private float timerSize;
+    private bool powerSizeUP;
+    private Vector2 size;
 
     private ballController ball;
 
@@ -22,9 +24,10 @@ public class padlleController : MonoBehaviour
     private void Start()
     {
         rig = GetComponent<Rigidbody2D>();
-        powerSpeedInterval = 5;
+        powerInterval = 5;
         speed = baseSpeed;
         powerSpeedUP = false;
+        powerSizeUP = false;
     }
 
     // Update is called once per frame
@@ -32,28 +35,32 @@ public class padlleController : MonoBehaviour
     {
         // moveing object  width input
         MoveObject(GetInput());
+
+        // check is power up speed active
         if (powerSpeedUP == true)
         {
             timerSpeed += Time.deltaTime;
     
-            if (timerSpeed > powerSpeedInterval) 
+            if (timerSpeed > powerInterval) 
             { 
                 resetSpeedPadlle();
                 powerSpeedUP = false;
-                timerSpeed -= powerSpeedInterval; 
+                timerSpeed -= powerInterval; 
             }
         }
-    }
 
-    private void resetSpeedPadlle()
-    {
-        Debug.Log("reset sped");
-        speed = baseSpeed;
-    }
-
-    private void resetSizePadlle()
-    {
-
+        // check is pewer up size active
+        if (powerSizeUP == true)
+        {
+            timerSize += Time.deltaTime;
+    
+            if (timerSize > powerInterval) 
+            { 
+                resetSizePadlle();
+                powerSizeUP = false;
+                timerSize -= powerInterval; 
+            }
+        }
     }
 
     //funtion for get input from player
@@ -70,6 +77,16 @@ public class padlleController : MonoBehaviour
          
         return Vector2.zero; 
     } 
+
+    // for reset value
+    private void resetSpeedPadlle()
+    {
+        speed = baseSpeed;
+    }
+    private void resetSizePadlle()
+    {
+        transform.localScale = new Vector2((float)0.5 , 4);
+    }
  
     // funtion for moving paddle
     private void MoveObject(Vector2 movement) 
@@ -83,8 +100,18 @@ public class padlleController : MonoBehaviour
         speed *= 2; 
         powerSpeedUP = true;
     }
+    // powerup size scale of padle
+    public void ActivatePUSizeUp()
+    {
+        transform.localScale = new Vector2(1, 8);
+        powerSizeUP = true;
+    }
 
 
+
+
+
+// akan di hapus code dibawah
     public float TimerSpeed
     {
         get
@@ -97,6 +124,13 @@ public class padlleController : MonoBehaviour
         get
         {
             return this.speed;
+        }
+    }
+    public float TimerSize
+    {
+        get
+        {
+            return this.timerSize;
         }
     }
 }
