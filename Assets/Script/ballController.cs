@@ -7,7 +7,7 @@ public class ballController : MonoBehaviour
 
     public Vector2 speed;
     private Rigidbody2D rig;
-    private string Paddle;
+    private string Paddle = "padlle2";
 
     
     // Start is called before the first frame update
