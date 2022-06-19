@@ -9,6 +9,5 @@ public class backBTN : MonoBehaviour
     public void Back() 
     { 
         SceneManager.LoadScene("Main Menu"); 
-        Debug.Log("Back to menu");
     } 
 }

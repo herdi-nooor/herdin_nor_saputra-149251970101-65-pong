@@ -7,7 +7,6 @@ public class ballController : MonoBehaviour
 
     public Vector2 speed;
     private Rigidbody2D rig;
-    public Vector2 resetPosition;
     private string Paddle;
 
     
@@ -28,8 +27,14 @@ public class ballController : MonoBehaviour
     // method untuk mereset posisi bola
     public void ResetBall() 
     { 
-        transform.position = new Vector3(resetPosition.x, resetPosition.y, 0);
-        rig.velocity = speed;
+        if(paddle == "padlle2")
+        {
+            transform.position = new Vector3(8,0, 0);
+            rig.velocity = -speed;
+        }else if(paddle == "padlle1"){
+            transform.position = new Vector3(-8, 0, 0);
+            rig.velocity = speed;
+        }
     } 
 
     // method jika bola mengenai powerUp
@@ -48,6 +53,4 @@ public class ballController : MonoBehaviour
             Paddle = name;
         }
     }
-
-    
 }

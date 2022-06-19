@@ -584,7 +584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightScore: 0
   leftScore: 0
-  maxScore: 3
+  maxScore: 12
   ball: {fileID: 1039632283}
 --- !u!4 &126180063
 Transform:
@@ -1567,7 +1567,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039632279}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1607,7 +1607,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: {x: 20, y: 0}
-  resetPosition: {x: 0, y: 0}
 --- !u!58 &1039632284
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2095,9 +2094,9 @@ MonoBehaviour:
   powerUpAreaMin: {x: -12, y: -7}
   powerUpAreaMax: {x: 12, y: 7}
   powerUpTemplateList:
-  - {fileID: 1430423497}
-  - {fileID: 115384054}
   - {fileID: 663297945}
+  - {fileID: 115384054}
+  - {fileID: 1430423497}
 --- !u!4 &1723285491
 Transform:
   m_ObjectHideFlags: 0
